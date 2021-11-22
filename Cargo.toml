@@ -9,7 +9,7 @@ repository = "https://github.com/rust-vmm/vfio-user"
 
 [dependencies]
 anyhow = "1.0.48"
-libc = "0.2.107"
+libc = "0.2.108"
 log = "0.4.14"
 serde = {version = ">=1.0.27", features = ["rc"] }
 serde_derive = ">=1.0.27"
