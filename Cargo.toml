@@ -8,7 +8,7 @@ description = "Support for vfio-user devices"
 repository = "https://github.com/rust-vmm/vfio-user"
 
 [dependencies]
-anyhow = "1.0.53"
+anyhow = "1.0.55"
 libc = "0.2.118"
 log = "0.4.14"
 serde = {version = ">=1.0.27", features = ["rc"] }
