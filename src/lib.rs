@@ -26,6 +26,9 @@ extern crate serde_derive;
 #[macro_use]
 extern crate log;
 
+const VERSION_MAJOR: u16 = 0;
+const VERSION_MINOR: u16 = 0;
+
 #[allow(dead_code)]
 #[repr(u16)]
 #[derive(Clone, Copy, Debug, Default)]
@@ -313,8 +316,8 @@ impl Client {
                 message_size: (size_of::<Version>() + version_data.len() + 1) as u32,
                 ..Default::default()
             },
-            major: 0,
-            minor: 1,
+            major: VERSION_MAJOR,
+            minor: VERSION_MINOR,
         };
         debug!("Command: {:?}", version);
 
@@ -914,8 +917,8 @@ impl Server {
                         message_size: (size_of::<Version>() + server_version_data.len() + 1) as u32,
                         ..Default::default()
                     },
-                    major: 0,
-                    minor: 0,
+                    major: VERSION_MAJOR,
+                    minor: VERSION_MINOR,
                 };
 
                 let server_version_data = CString::new(server_version_data.as_bytes()).unwrap();
